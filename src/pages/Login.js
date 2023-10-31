@@ -12,11 +12,11 @@ export default function Login() {
     }
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/api/auth/login', login).then(res => { localStorage.setItem('token', res.data.token); navigate('/') }).catch(err => alert(err.response.data));
+        axios.post('https://roomsynclogin.onrender.com/api/auth/login', login).then(res => { localStorage.setItem('token', res.data.token);  window.open('https://roomsync-td0v.onrender.com','_blank');}).catch(err => alert(err.response.data));
     }
     return (
         <div className='login'>
-            <div className="loginadmin"><Link to='/adminlogin' >Login as Admin</Link></div>
+            {/* <div className="loginadmin"><Link to='/adminlogin' >Login as Admin</Link></div> */}
             <h2 className="loghead">Sign-In</h2>
             <form onSubmit={submitHandler} className="loginform">
                 <label htmlFor="email">Username: <br />

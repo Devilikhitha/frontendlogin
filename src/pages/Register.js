@@ -17,7 +17,7 @@ export default function Register() {
     }
     return (
         <div className='register'>
-            <div className="loginadmin"><Link to='/adminlogin' >Login as Admin</Link></div>
+            {/* <div className="loginadmin"><Link to='/adminlogin' >Login as Admin</Link></div> */}
             <h2 className="regishead">Sign-up</h2>
             <form className="regisform" onSubmit={submitHandler}>
                 <label htmlFor="name">Name: <br />
